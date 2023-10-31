@@ -12,6 +12,8 @@ class Adapter_Siswa(private val list: ArrayList<Siswa>) : RecyclerView.Adapter<A
 
         val nama : TextView = itemView.findViewById(R.id.adapternama)
         val keterangan : TextView = itemView.findViewById(R.id.adapterketerangan)
+        val tanggal : TextView = itemView.findViewById(R.id.adaptertanggalsiswa)
+        val kelas : TextView = itemView.findViewById(R.id.adapterkelassiswa)
 
     }
 
@@ -33,6 +35,8 @@ class Adapter_Siswa(private val list: ArrayList<Siswa>) : RecyclerView.Adapter<A
 
         holder.nama.text = list[position].nama_siswa.toString()
         holder.keterangan.text = list[position].keterangan_siswa.toString()
+        holder.tanggal.text = list[position].tanggal_siswa.toString()
+        holder.kelas.text = list[position].kelas_siswa.toString()
 
     }
 

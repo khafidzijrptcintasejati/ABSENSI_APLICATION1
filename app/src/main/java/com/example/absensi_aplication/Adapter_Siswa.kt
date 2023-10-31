@@ -18,7 +18,7 @@ class Adapter_Siswa(private val list: ArrayList<Siswa>) : RecyclerView.Adapter<A
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         return ViewHolder(
             LayoutInflater.from(parent.context).inflate(
-                R.layout.adapter,
+                R.layout.adaptersiswa,
                 parent,
                 false
             )

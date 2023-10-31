@@ -4,13 +4,14 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
+import com.example.absensi_aplication.databinding.ActivityMain3Binding
 import com.example.absensi_aplication.databinding.ActivityMain4Binding
-import com.example.absensi_aplication.room.DATABASE
-import com.example.absensi_aplication.room.Guru
+import com.example.absensi_aplication.room.DBSiswa
+import com.example.absensi_aplication.room.Siswa
 
 class MainActivity4 : AppCompatActivity() {
     private lateinit var binding : ActivityMain4Binding
-    private val db by lazy { DATABASE.getInstance(this) }
+    private val db by lazy { DBSiswa.getInstance(this) }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMain4Binding.inflate(layoutInflater)
@@ -22,10 +23,11 @@ class MainActivity4 : AppCompatActivity() {
                 binding.tanggalguru.text.isNotEmpty()&&
                 binding.keteranganguru.text.isNotEmpty()){
 
-                db.daoGuru().insertguru(
-                    Guru(
+                db.barangDao().insertSiswa(
+                    Siswa(
+                    0,
                     binding.namaguru.text.toString(),
-                    binding.nipguru.text.toString().toInt(),
+                    binding.nipguru.text.toString(),
                     binding.tanggalguru.text.toString().toInt(),
                     binding.keteranganguru.text.toString()
                 )

@@ -9,7 +9,7 @@ import androidx.room.Update
 
 @Dao
 interface DaoGuru {
-    @Query("SELECT * FROM tb_guru")
+    @Query("SELECT * FROM tb_Guru")
     fun getAllguru() : List<Guru>
 
     @Insert

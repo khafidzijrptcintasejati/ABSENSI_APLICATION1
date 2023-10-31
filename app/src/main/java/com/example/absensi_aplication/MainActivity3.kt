@@ -5,12 +5,12 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
 import com.example.absensi_aplication.databinding.ActivityMain3Binding
-import com.example.absensi_aplication.room.DBSiswa
+import com.example.absensi_aplication.room.DATABASE
 import com.example.absensi_aplication.room.Siswa
 
 class MainActivity3 : AppCompatActivity() {
     private lateinit var binding : ActivityMain3Binding
-    private val db by lazy { DBSiswa.getInstance(this) }
+    private val db by lazy { DATABASE.getInstance(this) }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMain3Binding.inflate(layoutInflater)
@@ -23,7 +23,7 @@ class MainActivity3 : AppCompatActivity() {
                 binding.tanggalsiswa.text.isNotEmpty()&&
                 binding.keterangansiswa.text.isNotEmpty()){
 
-                db.barangDao().insertSiswa(Siswa(
+                db.daoSiswa().insertSiswa(Siswa(
                     0,
                     binding.namasiswa.text.toString(),
                     binding.kelassiswa.text.toString(),

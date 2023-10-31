@@ -7,9 +7,9 @@ import androidx.room.PrimaryKey
 @Entity(tableName = "tb_Guru")
 data class Guru(
 
-    @PrimaryKey(autoGenerate = true)
+    @PrimaryKey
     @ColumnInfo(name = "nama_guru")  val nama_guru    : String,
-    @ColumnInfo(name = "nip_guru" ) val nip_guru : String,
+    @ColumnInfo(name = "nip_guru" ) val nip_guru : Int,
     @ColumnInfo(name = "tanggal_guru")  val tanggal_guru  : Int,
     @ColumnInfo(name = "keterangan_guru")  val keterangan_guru    : String
 )

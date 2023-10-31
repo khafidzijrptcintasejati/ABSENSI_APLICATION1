@@ -13,12 +13,12 @@ interface DaoSiswa{
     fun getAllSiswa() : List<Siswa>
 
     @Insert
-    fun insertSiswa( entitySiswa: Siswa)
+    fun insertSiswa( siswa: Siswa)
 
     @Update
-    fun updateSiswa(entitySiswa: Siswa)
+    fun updateSiswa(siswa: Siswa)
 
     @Delete
-    fun deleteBrg(entitySiswa: Siswa)
+    fun deleteBrg(siswa: Siswa)
 
 }

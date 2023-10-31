@@ -11,9 +11,9 @@ class Adapter_Siswa(private val list: ArrayList<Siswa>) : RecyclerView.Adapter<A
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
 
         val nama : TextView = itemView.findViewById(R.id.adapternama)
-        val keterangan : TextView = itemView.findViewById(R.id.adapterketerangan)
-        val tanggal : TextView = itemView.findViewById(R.id.adaptertanggalsiswa)
         val kelas : TextView = itemView.findViewById(R.id.adapterkelassiswa)
+        val tanggal : TextView = itemView.findViewById(R.id.adaptertanggalsiswa)
+        val keterangan : TextView = itemView.findViewById(R.id.adapterketerangan)
 
     }
 
@@ -34,9 +34,9 @@ class Adapter_Siswa(private val list: ArrayList<Siswa>) : RecyclerView.Adapter<A
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
 
         holder.nama.text = list[position].nama_siswa.toString()
-        holder.keterangan.text = list[position].keterangan_siswa.toString()
-        holder.tanggal.text = list[position].tanggal_siswa.toString()
         holder.kelas.text = list[position].kelas_siswa.toString()
+        holder.tanggal.text = list[position].tanggal_siswa.toString()
+        holder.keterangan.text = list[position].keterangan_siswa.toString()
 
     }
 

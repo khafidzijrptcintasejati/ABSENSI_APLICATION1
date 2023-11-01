@@ -10,10 +10,10 @@ import com.example.absensi_aplication.room.Siswa
 class Adapter_Siswa(private val list: ArrayList<Siswa>) : RecyclerView.Adapter<Adapter_Siswa.ViewHolder>() {
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
 
-        val nama : TextView = itemView.findViewById(R.id.adapternama)
-        val kelas : TextView = itemView.findViewById(R.id.adapterkelassiswa)
-        val tanggal : TextView = itemView.findViewById(R.id.adaptertanggalsiswa)
-        val keterangan : TextView = itemView.findViewById(R.id.adapterketerangan)
+        val nama : TextView = itemView.findViewById(R.id.tampilnamasswa)
+        val kelas : TextView = itemView.findViewById(R.id.tampilkelassswa)
+        val tanggal : TextView = itemView.findViewById(R.id.tampiltanggalsswa)
+        val keterangan : TextView = itemView.findViewById(R.id.tampilketsswa)
 
     }
 

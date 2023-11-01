@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#3A9E92"
-    tools:context=".MainActivity3">
+    tools:context=".inputsswa_MainActivity">
 
   <ImageView
       android:id="@+id/imageView2"
@@ -45,18 +45,6 @@
       app:layout_constraintTop_toTopOf="parent"
       app:layout_constraintVertical_bias="0.042"
       app:srcCompat="@drawable/_0231005_083849" />
-
-  <ImageView
-      android:id="@+id/imageView4"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:layout_marginTop="208dp"
-      android:rotation="180"
-      app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintHorizontal_bias="0.0"
-      app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toTopOf="parent"
-      app:srcCompat="@drawable/bgrnd" />
 
   <androidx.constraintlayout.widget.ConstraintLayout
       android:layout_width="373dp"

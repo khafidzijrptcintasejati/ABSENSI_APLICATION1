@@ -28,7 +28,7 @@ class tampilguru : AppCompatActivity() {
             binding.nip.text = "$nip"
 
             binding.tambahguru.setOnClickListener {
-                startActivity(Intent(this, inputsswa_MainActivity::class.java))
+                startActivity(Intent(this, activity_loginguru::class.java))
             }
 
             binding.btnbackguru.setOnClickListener {

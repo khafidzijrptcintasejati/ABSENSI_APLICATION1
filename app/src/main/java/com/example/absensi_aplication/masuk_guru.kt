@@ -16,12 +16,12 @@ class masuk_guru : AppCompatActivity() {
         setContentView(binding.root)
 
         val nama = binding.namaguru
-        val nis = binding.nipguru
-        binding.masukguru.setOnClickListener{
-            if (nama.text.isNotEmpty()&&nis.text.isNotEmpty()) {
+        val nip = binding.nipguru
+            binding.masukguru.setOnClickListener{
+            if (nama.text.isNotEmpty()&&nip.text.isNotEmpty()) {
                 startActivity(
                     Intent(this, tampilguru::class.java).putExtra("nama", nama.text.toString())
-                        .putExtra("nis", nis.text.toString())
+                        .putExtra("nip", nip.text.toString())
                 )
                 alert("Login berhasil")
 

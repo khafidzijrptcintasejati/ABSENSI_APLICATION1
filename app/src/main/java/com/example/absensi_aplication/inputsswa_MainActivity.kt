@@ -4,16 +4,17 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
-import com.example.absensi_aplication.databinding.ActivityMain3Binding
+import com.example.absensi_aplication.databinding.InputsiswaActivityBinding
 import com.example.absensi_aplication.room.DATABASE
 import com.example.absensi_aplication.room.Siswa
 
-class MainActivity3 : AppCompatActivity() {
-    private lateinit var binding : ActivityMain3Binding
+
+class inputsswa_MainActivity : AppCompatActivity() {
+    private lateinit var binding : InputsiswaActivityBinding
     private val db by lazy { DATABASE.getInstance(this) }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityMain3Binding.inflate(layoutInflater)
+        binding = InputsiswaActivityBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         binding.masuksiswa.setOnClickListener{

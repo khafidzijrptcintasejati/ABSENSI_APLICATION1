@@ -58,7 +58,7 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/bottomNavigationView2"
+        android:id="@+id/btnMrd"
         android:layout_width="140dp"
         android:layout_height="140dp"
         android:layout_marginStart="8dp"
@@ -83,7 +83,7 @@
     </com.google.android.material.bottomnavigation.BottomNavigationView>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/bottomNavigationView"
+        android:id="@+id/btnGuru"
         android:layout_width="140dp"
         android:layout_height="140dp"
         android:layout_marginTop="552dp"

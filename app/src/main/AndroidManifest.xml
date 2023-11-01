@@ -12,6 +12,15 @@
         android:theme="@style/Theme.ABSENSI_APLICATION"
         tools:targetApi="31">
         <activity
+            android:name=".tampilguru"
+            android:exported="false" />
+        <activity
+            android:name=".tampilsiswa"
+            android:exported="false" />
+        <activity
+            android:name=".activity_loginguru"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity6"
             android:exported="false" />
         <activity

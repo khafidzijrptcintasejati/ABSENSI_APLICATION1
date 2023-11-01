@@ -14,10 +14,10 @@ class MainActivity5 : AppCompatActivity() {
 
         binding.btnguru2.setOnClickListener{
             startActivity(Intent(this,MainActivity4::class.java))
-        }
+        finish()}
         binding.btnmrd2.setOnClickListener{
             startActivity(Intent(this,MainActivity4::class.java))
-        }
+        finish()}
 
     }
 }

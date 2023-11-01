@@ -4,7 +4,9 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
+import com.example.absensi_aplication.databinding.ActivityLoginsiswaBinding
 import com.example.absensi_aplication.databinding.ActivityMain4Binding
+import com.example.absensi_aplication.databinding.ActivityTampilsiswaBinding
 import com.example.absensi_aplication.room.DATABASE
 import com.example.absensi_aplication.room.Guru
 
@@ -16,32 +18,23 @@ class MainActivity4 : AppCompatActivity() {
         binding = ActivityMain4Binding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.masukguru.setOnClickListener{
-            if (binding.namaguru.text.isNotEmpty() &&
-                binding.nipguru.text.isNotEmpty()&&
-                binding.tanggalguru.text.isNotEmpty()&&
-                binding.keteranganguru.text.isNotEmpty()){
-
-                db.daoGuru().insertguru(
-                    Guru(
-                    binding.namaguru.text.toString(),
-                    binding.nipguru.text.toString().toInt(),
-                    binding.tanggalguru.text.toString().toInt(),
-                    binding.keteranganguru.text.toString()
+        val nama = binding.namasiswa
+        val nis = binding.nissiswa
+        binding.masuksiswa.setOnClickListener{
+            if (nama.text.isNotEmpty()&&nis.text.isNotEmpty()) {
+                startActivity(
+                    Intent(this, tampilsiswa::class.java).putExtra("nama", nama.text.toString())
+                        .putExtra("nis", nis.text.toString())
                 )
-                )
+                alert("Login berhasil")
 
-                binding.namaguru.setText("")
-                binding.nipguru.setText("")
-                binding.tanggalguru.setText("")
-                binding.keteranganguru.setText("")
-
-                Toast.makeText(applicationContext,"data berhasil di tambahkan", Toast.LENGTH_SHORT).show()
-                startActivity(Intent(this,MainActivity::class.java))
-                finish()
-            } else{
-                Toast.makeText(applicationContext,"isi data terlebih dahulu", Toast.LENGTH_SHORT).show()
+            }else{
+                alert("Isi data terlebih dahulu")
             }
         }
+    }
+
+    private fun alert(msg:String) {
+        Toast.makeText(this, msg, Toast.LENGTH_SHORT).show()
     }
 }

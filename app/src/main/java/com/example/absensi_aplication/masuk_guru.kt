@@ -17,7 +17,6 @@ class masuk_guru : AppCompatActivity() {
 
         val nama = binding.namaguru
         val nip = binding.nipguru
-
             binding.masukguru.setOnClickListener{
             if (nama.text.isNotEmpty()&&nip.text.isNotEmpty()) {
                 startActivity(

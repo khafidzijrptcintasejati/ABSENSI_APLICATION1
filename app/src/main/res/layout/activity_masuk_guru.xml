@@ -79,7 +79,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <EditText
-            android:id="@+id/tanggalguru"
+            android:id="@+id/nipguru"
             android:layout_width="287dp"
             android:layout_height="55dp"
             android:layout_marginTop="48dp"
@@ -99,10 +99,10 @@
             android:backgroundTint="#009688"
             android:text="masuk"
             android:textSize="10pt"
-            app:layout_constraintEnd_toEndOf="@+id/tanggalguru"
+            app:layout_constraintEnd_toEndOf="@+id/nipguru"
             app:layout_constraintHorizontal_bias="0.504"
-            app:layout_constraintStart_toStartOf="@+id/tanggalguru"
-            app:layout_constraintTop_toBottomOf="@+id/tanggalguru" />
+            app:layout_constraintStart_toStartOf="@+id/nipguru"
+            app:layout_constraintTop_toBottomOf="@+id/nipguru" />
 
         <TextView
             android:id="@+id/textView5"

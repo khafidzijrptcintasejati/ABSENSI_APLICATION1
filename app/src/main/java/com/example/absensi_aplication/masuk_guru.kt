@@ -20,7 +20,7 @@ class masuk_guru : AppCompatActivity() {
             binding.masukguru.setOnClickListener{
             if (nama.text.isNotEmpty()&&nip.text.isNotEmpty()) {
                 startActivity(
-                    Intent(this, tampilguru::class.java).putExtra("nama", nama.text.toString())
+                    Intent(this, MainActivity5::class.java).putExtra("nama", nama.text.toString())
                         .putExtra("nip", nip.text.toString())
                 )
                 alert("Login berhasil")

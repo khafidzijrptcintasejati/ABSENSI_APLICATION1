@@ -19,6 +19,6 @@ interface DaoSiswa{
     fun updateSiswa(siswa: Siswa)
 
     @Delete
-    fun deleteBrg(siswa: Siswa)
+    fun hapus(siswa: Siswa)
 
 }

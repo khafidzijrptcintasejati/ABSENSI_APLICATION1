@@ -20,11 +20,12 @@ class MainActivity4 : AppCompatActivity() {
 
         val nama = binding.namasiswa
         val nis = binding.nissiswa
+        val kelas = binding.loginkelassiswa
         binding.masuksiswa.setOnClickListener{
             if (nama.text.isNotEmpty()&&nis.text.isNotEmpty()) {
                 startActivity(
                     Intent(this, tampilsiswa::class.java).putExtra("nama", nama.text.toString())
-                        .putExtra("nis", nis.text.toString())
+                        .putExtra("nis", nis.text.toString()).putExtra("kelas", kelas.text.toString())
                 )
                 alert("Login berhasil")
 

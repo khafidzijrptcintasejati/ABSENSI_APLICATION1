@@ -39,7 +39,7 @@ class inputsswa_MainActivity : AppCompatActivity() {
                 binding.keterangansiswa.setText("")
 
                 Toast.makeText(applicationContext,"data berhasil di tambahkan",Toast.LENGTH_SHORT).show()
-                startActivity(Intent(this,MainActivity::class.java))
+                startActivity(Intent(this,tampilsiswa::class.java))
                 finish()
             } else{
                 Toast.makeText(applicationContext,"isi data terlebih dahulu", Toast.LENGTH_SHORT).show()

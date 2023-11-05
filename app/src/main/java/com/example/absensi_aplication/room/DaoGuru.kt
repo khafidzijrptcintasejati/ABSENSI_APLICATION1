@@ -19,5 +19,5 @@ interface DaoGuru {
     fun updateguru(guru: Guru)
 
     @Delete
-    fun deleteBrg(guru: Guru)
+    fun deleteguru(guru: Guru)
 }

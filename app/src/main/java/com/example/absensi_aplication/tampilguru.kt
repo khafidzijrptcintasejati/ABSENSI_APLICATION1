@@ -1,12 +1,15 @@
 package com.example.absensi_aplication
 
+import android.content.DialogInterface
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AlertDialog
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.absensi_aplication.databinding.ActivityTampilguruBinding
-import com.example.absensi_aplication.databinding.ActivityTampilsiswaBinding
 import com.example.absensi_aplication.room.DATABASE
+import com.example.absensi_aplication.room.Guru
+import com.example.absensi_aplication.room.Siswa
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -34,13 +37,36 @@ class tampilguru : AppCompatActivity() {
             binding.btnbackguru.setOnClickListener {
                 onBackPressed()
                 startActivity(
-                    Intent(this, MainActivity4::class.java)
+                    Intent(this, MainActivity5::class.java)
                 )
             }
 
-            adapterGuru = Adapter_Guru(arrayListOf())
+            adapterGuru = Adapter_Guru(arrayListOf(),
+            object : Adapter_Guru.guru{
+                override fun onDelete(guru: Guru) {
+                    Guru(Guru) }}
+            )
 
         }
+    private fun Guru (guru: Guru){
+        val dialog = AlertDialog.Builder(this)
+        dialog.apply {
+            setTitle("KOnfirmasi hapus siswa")
+            setMessage("Apakah anda yakin ingin menghapus data ini?")
+            setNegativeButton("Batal"){
+                    dialogInterface: DialogInterface, i:Int->
+                dialogInterface.dismiss()
+            }
+            setPositiveButton("hapus"){
+                    dialogInterface: DialogInterface, i:Int->
+                dialogInterface.dismiss()
+                CoroutineScope(Dispatchers.IO).launch {
+                    db.daoGuru().deleteguru(guru)
+                }
+                recreate()
+            }
+        }
+    }
 
         private fun tampilguru() {
             binding.rvguru.layoutManager = LinearLayoutManager(this)

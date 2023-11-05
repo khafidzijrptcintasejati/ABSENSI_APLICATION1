@@ -13,10 +13,10 @@ class MainActivity5 : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.btnguru2.setOnClickListener{
-            startActivity(Intent(this,MainActivity4::class.java))
+            startActivity(Intent(this,tampilguru::class.java))
         finish()}
         binding.btnmrd2.setOnClickListener{
-            startActivity(Intent(this,MainActivity4::class.java))
+            startActivity(Intent(this,tampilsiswa::class.java))
         finish()}
 
     }

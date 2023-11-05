@@ -37,7 +37,7 @@ class activity_loginguru : AppCompatActivity() {
                 binding.keteranganguru.setText("")
 
                 Toast.makeText(applicationContext,"data berhasil di tambahkan", Toast.LENGTH_SHORT).show()
-                startActivity(Intent(this,MainActivity::class.java))
+                startActivity(Intent(this,tampilguru::class.java))
                 finish()
             } else{
                 Toast.makeText(applicationContext,"isi data terlebih dahulu", Toast.LENGTH_SHORT).show()

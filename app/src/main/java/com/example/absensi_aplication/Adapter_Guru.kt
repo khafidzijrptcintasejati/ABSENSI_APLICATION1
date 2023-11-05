@@ -20,7 +20,7 @@ class Adapter_Guru (private val list: ArrayList<Guru>) : RecyclerView.Adapter<Ad
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder{
         return ViewHolder(
             LayoutInflater.from(parent.context).inflate(
-                R.layout.adaptersiswa,
+                R.layout.adapterguru,
                 parent,
                 false
             )

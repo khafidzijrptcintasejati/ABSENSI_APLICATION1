@@ -29,7 +29,7 @@ class inputsswa_MainActivity : AppCompatActivity() {
                     binding.namasiswa.text.toString(),
                     binding.kelassiswa.text.toString(),
                     binding.tanggalsiswa.text.toString().toInt(),
-                    binding.keterangansiswa.text.toString()
+               binding.keterangansiswa.text.toString()
                 ))
 
                 binding.nissiwa.setText("")
@@ -42,8 +42,8 @@ class inputsswa_MainActivity : AppCompatActivity() {
                 startActivity(Intent(this,tampilsiswa::class.java))
                 finish()
             } else{
-                Toast.makeText(applicationContext,"isi data terlebih dahulu", Toast.LENGTH_SHORT).show()
-            }
+            Toast.makeText(applicationContext,"isi data terlebih dahulu", Toast.LENGTH_SHORT).show()
+        }
         }
     }
 }

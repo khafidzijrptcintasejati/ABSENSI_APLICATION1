@@ -18,6 +18,7 @@ class tampilsiswa : AppCompatActivity() {
     private val db by lazy { DATABASE.getInstance(this) }
     private lateinit var adapterSiswa: Adapter_Siswa
     private lateinit var binding: ActivityTampilsiswaBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityTampilsiswaBinding.inflate(layoutInflater)
@@ -41,9 +42,9 @@ class tampilsiswa : AppCompatActivity() {
         }
 
         adapterSiswa = Adapter_Siswa(arrayListOf(),
-        object :Adapter_Siswa.siswa{
+        object :Adapter_Siswa.onAdapterListener{
             override fun hapus(siswa: Siswa) {
-                hapus(siswa)
+                hapusData(siswa)
             }
         })
 

@@ -8,7 +8,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.absensi_aplication.room.Guru
 
-class Adapter_Guru(private val list: ArrayList<Guru>,val listener : Guru) : RecyclerView.Adapter<Adapter_Guru.ViewHolder>() {
+class Adapter_Guru(private val list: ArrayList<Guru>,val listener : onAdapterListener) : RecyclerView.Adapter<Adapter_Guru.ViewHolder>() {
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
 
         val nama : TextView = itemView.findViewById(R.id.adapternamaguru)
@@ -34,12 +34,15 @@ class Adapter_Guru(private val list: ArrayList<Guru>,val listener : Guru) : Recy
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
 
-        holder.nama.text = list[position].nama_guru.toString()
+        holder.nama.text = list[position].nama_guru
         holder.tanggal.text = list[position].tanggal_guru.toString()
-        holder.keterangan.text = list[position].keterangan_guru.toString()
+        holder.keterangan.text = list[position].keterangan_guru
+        holder.hapus.setOnClickListener {
+            listener.onDelete(list[position])
+        }
 
     }
-    interface guru {fun onDelete(guru: Guru)}
+    interface onAdapterListener{fun onDelete(guru: Guru)}
 
     fun setData(newLlist : List<Guru>) {
         list.clear()

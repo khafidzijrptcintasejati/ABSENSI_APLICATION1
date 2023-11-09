@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.appcompat.app.AlertDialog
 import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.room.Delete
 import com.example.absensi_aplication.databinding.ActivityTampilguruBinding
 import com.example.absensi_aplication.room.DATABASE
 import com.example.absensi_aplication.room.Guru
@@ -24,6 +25,13 @@ class tampilguru : AppCompatActivity() {
             binding = ActivityTampilguruBinding.inflate(layoutInflater)
             setContentView(binding.root)
 
+            adapterGuru = Adapter_Guru(arrayListOf(),
+                object : Adapter_Guru.onAdapterListener {
+                    override fun onDelete(guru: Guru) {
+                        DeleteGuru(guru)
+                    }
+                })
+
             val nama = intent.getStringExtra("nama").toString()
             val nip = intent.getStringExtra("nip").toString()
 
@@ -41,47 +49,45 @@ class tampilguru : AppCompatActivity() {
                 )
             }
 
-            adapterGuru = Adapter_Guru(arrayListOf(),
-            object : Adapter_Guru.guru{
-                override fun onDelete(guru: Guru) {
-                    Guru(Guru) }}
-            )
-
-        }
-    private fun Guru (guru: Guru){
+                }
+    private fun DeleteGuru(guru: Guru) {
         val dialog = AlertDialog.Builder(this)
         dialog.apply {
             setTitle("KOnfirmasi hapus siswa")
             setMessage("Apakah anda yakin ingin menghapus data ini?")
-            setNegativeButton("Batal"){
-                    dialogInterface: DialogInterface, i:Int->
+            setNegativeButton("Batal") { dialogInterface: DialogInterface, i: Int ->
                 dialogInterface.dismiss()
             }
-            setPositiveButton("hapus"){
-                    dialogInterface: DialogInterface, i:Int->
+            setPositiveButton("hapus") { dialogInterface: DialogInterface, i: Int ->
                 dialogInterface.dismiss()
                 CoroutineScope(Dispatchers.IO).launch {
                     db.daoGuru().deleteguru(guru)
                 }
                 recreate()
+                finish()
+                startActivity(intent)
             }
         }
+        dialog.show()
     }
 
-        private fun tampilguru() {
-            binding.rvguru.layoutManager = LinearLayoutManager(this)
-            CoroutineScope(Dispatchers.IO).launch {
-                val database = db.daoGuru().getAllguru()
-                adapterGuru.setData(database)
-                withContext(Dispatchers.Main) {
-                    adapterGuru.notifyDataSetChanged()
+                override fun onResume() {
+                    super.onResume()
+                        tampilguru()
+                    }
+
+                private fun tampilguru() {
+                    binding.rvguru.layoutManager = LinearLayoutManager(this)
+                    CoroutineScope(Dispatchers.IO).launch {
+                        val database = db.daoGuru().getAllguru()
+                        adapterGuru.setData(database)
+                        withContext(Dispatchers.Main) {
+                            adapterGuru.notifyDataSetChanged()
+                        }
+                    }
+                    binding.rvguru.adapter = adapterGuru
                 }
-            }
-            binding.rvguru.adapter = adapterGuru
-        }
 
-        override fun onResume() {
-            super.onResume()
-            tampilguru()
-        }
-    }
+               }
+
+

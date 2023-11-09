@@ -76,10 +76,9 @@
         android:layout_height="610dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.428"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/constraintLayout3"
-        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintVertical_bias="0.218"
         tools:listitem="@layout/adapterguru" />
 
     <Button

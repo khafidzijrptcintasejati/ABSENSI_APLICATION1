@@ -10,7 +10,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.absensi_aplication.room.Siswa
 
-class Adapter_Siswa(val list: ArrayList<Siswa>, val listener : siswa) : RecyclerView.Adapter<Adapter_Siswa.ViewHolder>() {
+class Adapter_Siswa(val list: ArrayList<Siswa>, val listener: onAdapterListener) : RecyclerView.Adapter<Adapter_Siswa.ViewHolder>() {
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
 
         val nama : TextView = itemView.findViewById(R.id.tampilnamasswa)
@@ -47,6 +47,7 @@ class Adapter_Siswa(val list: ArrayList<Siswa>, val listener : siswa) : Recycler
         }
 
     }
+    interface onAdapterListener{fun hapus(siswa: Siswa)}
 
     fun setData(newLlist : List<Siswa>) {
         list.clear()

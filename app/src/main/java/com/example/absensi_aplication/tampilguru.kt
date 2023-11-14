@@ -70,24 +70,22 @@ class tampilguru : AppCompatActivity() {
         }
         dialog.show()
     }
+    private fun tampilguru() {
+        binding.rvguru.layoutManager = LinearLayoutManager(this)
+        CoroutineScope(Dispatchers.IO).launch {
+            val database = db.daoGuru().getAllguru()
+            adapterGuru.setData(database)
+            withContext(Dispatchers.Main) {
+                adapterGuru.notifyDataSetChanged()
+            }
+        }
+        binding.rvguru.adapter = adapterGuru
+    }
 
-                override fun onResume() {
-                    super.onResume()
-                        tampilguru()
-                    }
-
-                private fun tampilguru() {
-                    binding.rvguru.layoutManager = LinearLayoutManager(this)
-                    CoroutineScope(Dispatchers.IO).launch {
-                        val database = db.daoGuru().getAllguru()
-                        adapterGuru.setData(database)
-                        withContext(Dispatchers.Main) {
-                            adapterGuru.notifyDataSetChanged()
-                        }
-                    }
-                    binding.rvguru.adapter = adapterGuru
-                }
-
-               }
+    override fun onResume() {
+        super.onResume()
+        tampilguru()
+    }
+}
 
 

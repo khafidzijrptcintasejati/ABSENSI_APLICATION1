@@ -24,6 +24,13 @@ class tampilsiswa : AppCompatActivity() {
         binding = ActivityTampilsiswaBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        adapterSiswa = Adapter_Siswa(arrayListOf(),
+            object :Adapter_Siswa.onAdapterListener{
+                override fun hapus(siswa: Siswa) {
+                    hapusData(siswa)
+                }
+            })
+
         val nama=intent.getStringExtra("nama").toString()
         val nis=intent.getStringExtra("nis").toString()
 
@@ -40,13 +47,6 @@ class tampilsiswa : AppCompatActivity() {
                 Intent(this,MainActivity4::class.java)
             )
         }
-
-        adapterSiswa = Adapter_Siswa(arrayListOf(),
-        object :Adapter_Siswa.onAdapterListener{
-            override fun hapus(siswa: Siswa) {
-                hapusData(siswa)
-            }
-        })
 
     }
     private fun hapusData (siswa: Siswa){
@@ -65,9 +65,13 @@ class tampilsiswa : AppCompatActivity() {
                     db.daoSiswa().hapus(siswa)
                 }
                 recreate()
+                finish()
+                startActivity(intent)
             }
         }
+        dialog.show()
     }
+
     private fun tampilsiswa(){
         binding.rvsiswa.layoutManager = LinearLayoutManager(this)
         CoroutineScope(Dispatchers.IO).launch {

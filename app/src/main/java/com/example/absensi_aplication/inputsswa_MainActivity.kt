@@ -12,6 +12,7 @@ import com.example.absensi_aplication.room.Siswa
 class inputsswa_MainActivity : AppCompatActivity() {
     private lateinit var binding : InputsiswaActivityBinding
     private val db by lazy { DATABASE.getInstance(this) }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = InputsiswaActivityBinding.inflate(layoutInflater)

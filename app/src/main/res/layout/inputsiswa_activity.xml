@@ -69,7 +69,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/editnis"
+        android:id="@+id/nis"
         android:layout_width="287dp"
         android:layout_height="55dp"
         android:layout_marginTop="12dp"
@@ -81,7 +81,7 @@
         app:layout_constraintTop_toBottomOf="@+id/namasiswa" />
 
     <EditText
-        android:id="@+id/editkelas"
+        android:id="@+id/kelas"
         android:layout_width="287dp"
         android:layout_height="55dp"
         android:ems="10"
@@ -89,10 +89,10 @@
         android:inputType="text"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editnis" />
+        app:layout_constraintTop_toBottomOf="@+id/nis" />
 
     <EditText
-        android:id="@+id/edittanggal"
+        android:id="@+id/tanggal"
         android:layout_width="287dp"
         android:layout_height="55dp"
         android:ems="10"
@@ -100,10 +100,10 @@
         android:inputType="number"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editkelas" />
+        app:layout_constraintTop_toBottomOf="@+id/kelas" />
 
     <EditText
-        android:id="@+id/editketerangan"
+        android:id="@+id/keterangan"
         android:layout_width="287dp"
         android:layout_height="55dp"
         android:layout_marginTop="8dp"
@@ -113,10 +113,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.488"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edittanggal" />
+        app:layout_constraintTop_toBottomOf="@+id/tanggal" />
 
     <Button
-        android:id="@+id/editmasuk"
+        android:id="@+id/masuk"
         android:layout_width="166dp"
         android:layout_height="71dp"
         android:layout_marginTop="16dp"
@@ -126,7 +126,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editketerangan" />
+        app:layout_constraintTop_toBottomOf="@+id/keterangan" />
 
     <TextView
         android:id="@+id/textView5"

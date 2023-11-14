@@ -18,26 +18,26 @@ class inputsswa_MainActivity : AppCompatActivity() {
         binding = InputsiswaActivityBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.masuksiswa.setOnClickListener{
-            if (binding.nissiwa.text.isNotEmpty() &&
+        binding.masuk.setOnClickListener{
+            if (binding.nis.text.isNotEmpty() &&
                 binding.namasiswa.text.isNotEmpty()&&
-                binding.kelassiswa.text.isNotEmpty()&&
-                binding.tanggalsiswa.text.isNotEmpty()&&
-                binding.keterangansiswa.text.isNotEmpty()){
+                binding.kelas.text.isNotEmpty()&&
+                binding.tanggal.text.isNotEmpty()&&
+                binding.keterangan.text.isNotEmpty()){
 
                 db.daoSiswa().insertSiswa(Siswa(
                     0,
                     binding.namasiswa.text.toString(),
-                    binding.kelassiswa.text.toString(),
-                    binding.tanggalsiswa.text.toString().toInt(),
-               binding.keterangansiswa.text.toString()
+                    binding.kelas.text.toString(),
+                    binding.tanggal.text.toString().toInt(),
+               binding.keterangan.text.toString()
                 ))
 
-                binding.nissiwa.setText("")
+                binding.nis.setText("")
                 binding.namasiswa.setText("")
-                binding.kelassiswa.setText("")
-                binding.tanggalsiswa.setText("")
-                binding.keterangansiswa.setText("")
+                binding.kelas.setText("")
+                binding.tanggal.setText("")
+                binding.keterangan.setText("")
 
                 Toast.makeText(applicationContext,"data berhasil di tambahkan",Toast.LENGTH_SHORT).show()
                 startActivity(Intent(this,tampilsiswa::class.java))

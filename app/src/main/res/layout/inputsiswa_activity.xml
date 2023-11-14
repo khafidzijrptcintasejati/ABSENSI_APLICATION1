@@ -56,7 +56,7 @@
       app:layout_constraintStart_toStartOf="parent">
 
     <EditText
-        android:id="@+id/editnama"
+        android:id="@+id/namasiswa"
         android:layout_width="289dp"
         android:layout_height="50dp"
         android:layout_marginTop="84dp"
@@ -78,7 +78,7 @@
         android:inputType="number"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editnama" />
+        app:layout_constraintTop_toBottomOf="@+id/namasiswa" />
 
     <EditText
         android:id="@+id/editkelas"

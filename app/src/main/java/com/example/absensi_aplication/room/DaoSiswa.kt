@@ -21,4 +21,8 @@ interface DaoSiswa{
     @Delete
     fun hapus(siswa: Siswa)
 
+    @Query("SELECT * FROM tb_siswa WHERE nis_siswa =:KODE")
+    fun getKODE(KODE:Int): List<Siswa>
+
+
 }

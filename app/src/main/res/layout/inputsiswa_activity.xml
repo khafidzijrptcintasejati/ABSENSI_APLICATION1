@@ -56,7 +56,7 @@
       app:layout_constraintStart_toStartOf="parent">
 
     <EditText
-        android:id="@+id/namasiswa"
+        android:id="@+id/editnama"
         android:layout_width="289dp"
         android:layout_height="50dp"
         android:layout_marginTop="84dp"
@@ -69,7 +69,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/nissiwa"
+        android:id="@+id/editnis"
         android:layout_width="287dp"
         android:layout_height="55dp"
         android:layout_marginTop="12dp"
@@ -78,10 +78,10 @@
         android:inputType="number"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/namasiswa" />
+        app:layout_constraintTop_toBottomOf="@+id/editnama" />
 
     <EditText
-        android:id="@+id/kelassiswa"
+        android:id="@+id/editkelas"
         android:layout_width="287dp"
         android:layout_height="55dp"
         android:ems="10"
@@ -89,10 +89,10 @@
         android:inputType="text"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/nissiwa" />
+        app:layout_constraintTop_toBottomOf="@+id/editnis" />
 
     <EditText
-        android:id="@+id/tanggalsiswa"
+        android:id="@+id/edittanggal"
         android:layout_width="287dp"
         android:layout_height="55dp"
         android:ems="10"
@@ -100,10 +100,10 @@
         android:inputType="number"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/kelassiswa" />
+        app:layout_constraintTop_toBottomOf="@+id/editkelas" />
 
     <EditText
-        android:id="@+id/keterangansiswa"
+        android:id="@+id/editketerangan"
         android:layout_width="287dp"
         android:layout_height="55dp"
         android:layout_marginTop="8dp"
@@ -113,10 +113,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.488"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tanggalsiswa" />
+        app:layout_constraintTop_toBottomOf="@+id/edittanggal" />
 
     <Button
-        android:id="@+id/masuksiswa"
+        android:id="@+id/editmasuk"
         android:layout_width="166dp"
         android:layout_height="71dp"
         android:layout_marginTop="16dp"
@@ -126,7 +126,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/keterangansiswa" />
+        app:layout_constraintTop_toBottomOf="@+id/editketerangan" />
 
     <TextView
         android:id="@+id/textView5"

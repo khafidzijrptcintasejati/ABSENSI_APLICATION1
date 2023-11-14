@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#3A9E92"
-    tools:context=".MainActivity4">
+    tools:context=".inputsswa_MainActivity">
 
     <ImageView
         android:id="@+id/imageView2"
@@ -23,7 +23,7 @@
         android:id="@+id/textView"
         android:layout_width="196dp"
         android:layout_height="27dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="16dp"
         android:fontFamily="sans-serif-condensed-medium"
         android:text="ABSENCE SCHOOL"
         android:textColor="#000000"
@@ -40,22 +40,11 @@
         android:layout_height="193dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.486"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.022"
+        app:layout_constraintVertical_bias="0.042"
         app:srcCompat="@drawable/_0231005_083849" />
-
-    <ImageView
-        android:id="@+id/imageView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="208dp"
-        android:rotation="180"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/bgrnd" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="373dp"
@@ -67,64 +56,88 @@
         app:layout_constraintStart_toStartOf="parent">
 
         <EditText
-            android:id="@+id/loginkelassiswa"
-            android:layout_width="289dp"
-            android:layout_height="50dp"
-            android:layout_marginTop="244dp"
-            android:ems="10"
-            android:hint="Kelas"
-            android:inputType="text"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.476"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <EditText
             android:id="@+id/editnama"
             android:layout_width="289dp"
             android:layout_height="50dp"
-            android:layout_marginTop="112dp"
+            android:layout_marginTop="84dp"
             android:ems="10"
             android:hint="Nama"
             android:inputType="text"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.494"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <EditText
-            android:id="@+id/nissiswa"
+            android:id="@+id/editnis"
             android:layout_width="287dp"
             android:layout_height="55dp"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="12dp"
             android:ems="10"
             android:hint="Nis"
             android:inputType="number"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.488"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/editnama" />
+
+        <EditText
+            android:id="@+id/editkelas"
+            android:layout_width="287dp"
+            android:layout_height="55dp"
+            android:ems="10"
+            android:hint="Kelas"
+            android:inputType="text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editnis" />
+
+        <EditText
+            android:id="@+id/edittanggal"
+            android:layout_width="287dp"
+            android:layout_height="55dp"
+            android:ems="10"
+            android:hint="Tanggal"
+            android:inputType="number"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editkelas" />
+
+        <EditText
+            android:id="@+id/editketerangan"
+            android:layout_width="287dp"
+            android:layout_height="55dp"
+            android:layout_marginTop="8dp"
+            android:ems="10"
+            android:hint="Keterangan"
+            android:inputType="text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.488"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edittanggal" />
 
         <Button
             android:id="@+id/editmasuk"
             android:layout_width="166dp"
             android:layout_height="71dp"
-            android:layout_marginTop="36dp"
+            android:layout_marginTop="16dp"
             android:backgroundTint="#009688"
             android:text="masuk"
             android:textSize="10pt"
-            app:layout_constraintEnd_toEndOf="@+id/loginkelassiswa"
-            app:layout_constraintHorizontal_bias="0.512"
-            app:layout_constraintStart_toStartOf="@+id/loginkelassiswa"
-            app:layout_constraintTop_toBottomOf="@+id/loginkelassiswa" />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editketerangan" />
 
         <TextView
             android:id="@+id/textView5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="40dp"
-            android:text="isi data terlebih dahulu"
+            android:layout_marginTop="44dp"
+            android:fontFamily="sans-serif-condensed"
+            android:text="isi data terlebih dahulu :"
             android:textSize="20dp"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 

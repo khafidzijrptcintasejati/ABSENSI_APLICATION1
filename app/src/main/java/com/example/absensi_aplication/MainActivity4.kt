@@ -13,6 +13,7 @@ import com.example.absensi_aplication.room.Guru
 class MainActivity4 : AppCompatActivity() {
     private lateinit var binding : ActivityMain4Binding
     private val db by lazy { DATABASE.getInstance(this) }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMain4Binding.inflate(layoutInflater)

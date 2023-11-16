@@ -15,6 +15,7 @@ class Adapter_Guru(private val list: ArrayList<Guru>,val listener : onAdapterLis
         val tanggal : TextView = itemView.findViewById(R.id.adaptertanggalguru)
         val keterangan : TextView = itemView.findViewById(R.id.adapterketeranganguru)
         val hapus : ImageButton = itemView.findViewById(R.id.hapusguru)
+        val update : ImageButton = itemView.findViewById(R.id.updateguru)
 
     }
 
@@ -40,9 +41,14 @@ class Adapter_Guru(private val list: ArrayList<Guru>,val listener : onAdapterLis
         holder.hapus.setOnClickListener {
             listener.onDelete(list[position])
         }
+        holder.update.setOnClickListener {
+            listener.onUpdate(list[position])
+        }
 
     }
-    interface onAdapterListener{fun onDelete(guru: Guru)}
+    interface onAdapterListener{fun onDelete(guru: Guru)
+    fun onUpdate(guru: Guru)}
+
 
     fun setData(newLlist : List<Guru>) {
         list.clear()

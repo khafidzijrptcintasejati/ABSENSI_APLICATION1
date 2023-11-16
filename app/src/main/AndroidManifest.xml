@@ -12,6 +12,9 @@
         android:theme="@style/Theme.ABSENSI_APLICATION"
         tools:targetApi="31">
         <activity
+            android:name=".UpdateGuru"
+            android:exported="false" />
+        <activity
             android:name=".input_siswa"
             android:exported="false" />
         <activity
@@ -36,7 +39,7 @@
             android:name=".adapterteacher"
             android:exported="false" />
         <activity
-            android:name=".loginsiswa"
+            android:name=".contoh"
             android:exported="false" />
         <activity
             android:name=".MainActivity4"

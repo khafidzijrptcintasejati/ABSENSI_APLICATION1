@@ -49,7 +49,7 @@
         android:id="@+id/imageView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="208dp"
+        android:layout_marginTop="220dp"
         android:rotation="180"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -58,7 +58,7 @@
         app:srcCompat="@drawable/bgrnd" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="373dp"
+        android:layout_width="350dp"
         android:layout_height="477dp"
         android:layout_marginBottom="68dp"
         android:background="@color/white"

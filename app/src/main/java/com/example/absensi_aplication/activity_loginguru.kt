@@ -18,21 +18,21 @@ class activity_loginguru : AppCompatActivity() {
 
         binding.masukguru.setOnClickListener{
             if (binding.namaguru.text.isNotEmpty() &&
-                binding.nipguru2.text.isNotEmpty()&&
+                binding.nipguru.text.isNotEmpty()&&
                 binding.tanggalguru.text.isNotEmpty()&&
                 binding.keteranganguru.text.isNotEmpty()){
 
                 db.daoGuru().insertguru(
                     Guru(
                     binding.namaguru.text.toString(),
-                    binding.nipguru2.text.toString().toInt(),
+                    binding.nipguru.text.toString().toInt(),
                     binding.tanggalguru.text.toString().toInt(),
                     binding.keteranganguru.text.toString()
                 )
                 )
 
                 binding.namaguru.setText("")
-                binding.nipguru2.setText("")
+                binding.nipguru.setText("")
                 binding.tanggalguru.setText("")
                 binding.keteranganguru.setText("")
 

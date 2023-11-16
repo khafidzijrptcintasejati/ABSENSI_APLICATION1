@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#3A9E92"
-    tools:context=".MainActivity4">
+    tools:context=".UpdateGuru">
 
     <ImageView
         android:id="@+id/imageView2"
@@ -59,7 +59,7 @@
         app:srcCompat="@drawable/bgrnd" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="373dp"
+        android:layout_width="350dp"
         android:layout_height="477dp"
         android:layout_marginBottom="68dp"
         android:background="@color/white"
@@ -68,21 +68,20 @@
         app:layout_constraintStart_toStartOf="parent">
 
         <EditText
-            android:id="@+id/tanggalguru"
+            android:id="@+id/updatetanggalguru"
             android:layout_width="287dp"
             android:layout_height="55dp"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="20dp"
             android:ems="10"
             android:fontFamily="@font/cantata_one"
             android:hint="Tanggal"
             android:inputType="text"
-            app:layout_constraintEnd_toEndOf="@+id/nipguru"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="@+id/nipguru"
-            app:layout_constraintTop_toBottomOf="@+id/nipguru" />
+            app:layout_constraintEnd_toEndOf="@+id/updatenipguru"
+            app:layout_constraintStart_toStartOf="@+id/updatenipguru"
+            app:layout_constraintTop_toBottomOf="@+id/updatenipguru" />
 
         <EditText
-            android:id="@+id/nipguru"
+            android:id="@+id/updatenipguru"
             android:layout_width="287dp"
             android:layout_height="55dp"
             android:layout_marginTop="20dp"
@@ -90,12 +89,12 @@
             android:fontFamily="@font/cantata_one"
             android:hint="Nip"
             android:inputType="number"
-            app:layout_constraintEnd_toEndOf="@+id/namaguru"
-            app:layout_constraintStart_toStartOf="@+id/namaguru"
-            app:layout_constraintTop_toBottomOf="@+id/namaguru" />
+            app:layout_constraintEnd_toEndOf="@+id/updatenamaguru"
+            app:layout_constraintStart_toStartOf="@+id/updatenamaguru"
+            app:layout_constraintTop_toBottomOf="@+id/updatenamaguru" />
 
         <EditText
-            android:id="@+id/namaguru"
+            android:id="@+id/updatenamaguru"
             android:layout_width="289dp"
             android:layout_height="50dp"
             android:layout_marginTop="72dp"
@@ -109,31 +108,32 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <EditText
-            android:id="@+id/keteranganguru"
+            android:id="@+id/updateketeranganguru"
             android:layout_width="287dp"
             android:layout_height="55dp"
             android:layout_marginTop="20dp"
+            android:layout_marginEnd="43dp"
             android:ems="10"
             android:fontFamily="@font/cantata_one"
             android:hint="Keterangan"
             android:inputType="text"
-            app:layout_constraintEnd_toEndOf="@+id/tanggalguru"
+            app:layout_constraintEnd_toEndOf="@+id/updatetanggalguru"
             app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="@+id/tanggalguru"
-            app:layout_constraintTop_toBottomOf="@+id/tanggalguru" />
+            app:layout_constraintStart_toStartOf="@+id/updatetanggalguru"
+            app:layout_constraintTop_toBottomOf="@+id/updatetanggalguru" />
 
         <Button
-            android:id="@+id/masukguru"
+            android:id="@+id/updatemasukguru"
             android:layout_width="166dp"
             android:layout_height="71dp"
             android:backgroundTint="#009688"
             android:text="masuk"
             android:textSize="10pt"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="@+id/keteranganguru"
+            app:layout_constraintEnd_toEndOf="@+id/updateketeranganguru"
             app:layout_constraintHorizontal_bias="0.495"
-            app:layout_constraintStart_toStartOf="@+id/keteranganguru"
-            app:layout_constraintTop_toBottomOf="@+id/keteranganguru"
+            app:layout_constraintStart_toStartOf="@+id/updateketeranganguru"
+            app:layout_constraintTop_toBottomOf="@+id/updateketeranganguru"
             app:layout_constraintVertical_bias="0.355" />
 
         <TextView

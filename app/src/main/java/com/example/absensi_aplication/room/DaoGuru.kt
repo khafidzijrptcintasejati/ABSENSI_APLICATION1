@@ -21,7 +21,7 @@ interface DaoGuru {
     @Delete
     fun deleteguru(guru: Guru)
 
-    @Query("SELECT * FROM tb_Guru WHERE nip_guru =:KODE")
-    fun getKODE(KODE:Int): List<Guru>
+    @Query("SELECT * FROM tb_Guru WHERE nip_guru =:Kode")
+    fun getKODE(Kode:Int): List<Guru>
 
 }

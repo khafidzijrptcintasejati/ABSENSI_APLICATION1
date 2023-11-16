@@ -4,7 +4,6 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
-import com.example.absensi_aplication.databinding.ActivityLoginsiswaBinding
 import com.example.absensi_aplication.databinding.ActivityMain4Binding
 import com.example.absensi_aplication.databinding.ActivityTampilsiswaBinding
 import com.example.absensi_aplication.room.DATABASE

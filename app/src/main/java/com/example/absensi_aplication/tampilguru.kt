@@ -30,6 +30,10 @@ class tampilguru : AppCompatActivity() {
                     override fun onDelete(guru: Guru) {
                         DeleteGuru(guru)
                     }
+
+                    override fun onUpdate(guru: Guru) {
+                        UpdateGuruu(guru)
+                    }
                 })
 
             val nama = intent.getStringExtra("nama").toString()
@@ -69,6 +73,10 @@ class tampilguru : AppCompatActivity() {
             }
         }
         dialog.show()
+    }
+    private fun UpdateGuruu(guru: Guru){
+        startActivity(Intent(this,UpdateGuru::class.java).
+        putExtra("nipGuru",guru.nip_guru.toString()))
     }
     private fun tampilguru() {
         binding.rvguru.layoutManager = LinearLayoutManager(this)

@@ -1,5 +1,6 @@
 package com.example.absensi_aplication
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -10,6 +11,7 @@ import com.example.absensi_aplication.room.DATABASE
 class masuk_guru : AppCompatActivity() {
     private lateinit var binding :ActivityMasukGuruBinding
     private val db by lazy { DATABASE.getInstance(this) }
+    @SuppressLint("SuspiciousIndentation")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMasukGuruBinding.inflate(layoutInflater)

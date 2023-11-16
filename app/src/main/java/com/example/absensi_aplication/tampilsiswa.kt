@@ -25,41 +25,46 @@ class tampilsiswa : AppCompatActivity() {
         setContentView(binding.root)
 
         adapterSiswa = Adapter_Siswa(arrayListOf(),
-            object :Adapter_Siswa.onAdapterListener{
+            object : Adapter_Siswa.onAdapterListener {
                 override fun hapus(siswa: Siswa) {
                     hapusData(siswa)
                 }
+
+                override fun Update(siswa: Siswa){
+                    updateData(siswa)
+                }
             })
 
-        val nama=intent.getStringExtra("nama").toString()
-        val nis=intent.getStringExtra("nis").toString()
+        val nama = intent.getStringExtra("nama").toString()
+        val nis = intent.getStringExtra("nis").toString()
+        val kelas = intent.getStringExtra("kelas").toString()
 
-        binding.tpNama.text= "$nama"
-        binding.tpNis.text= "$nis"
+        binding.tpNama.text = "$nama"
+        binding.tpNis.text = "$nis"
+        binding.kelas.text = "$kelas"
 
-        binding.tambahsiswa.setOnClickListener{
-            startActivity(Intent(this, inputsswa_MainActivity::class.java))
+        binding.tambahsiswa.setOnClickListener {
+            startActivity(Intent(this, input_siswa::class.java))
         }
 
-        binding.btnbacksiswa.setOnClickListener{
+        binding.btnbacksiswa.setOnClickListener {
             onBackPressed()
             startActivity(
-                Intent(this,MainActivity4::class.java)
+                Intent(this, MainActivity4::class.java)
             )
         }
 
     }
-    private fun hapusData (siswa: Siswa){
+
+    private fun hapusData(siswa: Siswa) {
         val dialog = AlertDialog.Builder(this)
         dialog.apply {
             setTitle("KOnfirmasi hapus siswa")
             setMessage("Apakah anda yakin ingin menghapus data ini?")
-            setNegativeButton("Batal"){
-                dialogInterface: DialogInterface,i:Int->
+            setNegativeButton("Batal") { dialogInterface: DialogInterface, i: Int ->
                 dialogInterface.dismiss()
             }
-            setPositiveButton("hapus"){
-                dialogInterface:DialogInterface,i:Int->
+            setPositiveButton("hapus") { dialogInterface: DialogInterface, i: Int ->
                 dialogInterface.dismiss()
                 CoroutineScope(Dispatchers.IO).launch {
                     db.daoSiswa().hapus(siswa)
@@ -71,6 +76,10 @@ class tampilsiswa : AppCompatActivity() {
         }
         dialog.show()
     }
+     private fun updateData(siswa: Siswa){
+         startActivity(Intent(this,Update::class.java).
+         putExtra("nis_siswa", siswa.Nis_siswa.toString()))
+     }
 
     private fun tampilsiswa(){
         binding.rvsiswa.layoutManager = LinearLayoutManager(this)

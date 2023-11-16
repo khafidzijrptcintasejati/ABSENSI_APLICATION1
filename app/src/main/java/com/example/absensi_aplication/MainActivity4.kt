@@ -22,8 +22,8 @@ class MainActivity4 : AppCompatActivity() {
         val nama = binding.namasiswa
         val nis = binding.nissiswa
         val kelas = binding.loginkelassiswa
-        binding.masuksiswa.setOnClickListener{
-            if (nama.text.isNotEmpty()&&nis.text.isNotEmpty()) {
+        binding.editmasuk.setOnClickListener{
+            if (nama.text.isNotEmpty()&&nis.text.isNotEmpty()&&kelas.text.isNotEmpty()) {
                 startActivity(
                     Intent(this, tampilsiswa::class.java).putExtra("nama", nama.text.toString())
                         .putExtra("nis", nis.text.toString()).putExtra("kelas", kelas.text.toString())

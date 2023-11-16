@@ -8,7 +8,7 @@ import androidx.room.PrimaryKey
 data class Siswa(
 
     @PrimaryKey(autoGenerate = true)
-    @ColumnInfo(name = "nis_siswa")    val nis_siswa     : Int,
+    @ColumnInfo(name = "nis_siswa")    val Nis_siswa     : Int,
     @ColumnInfo(name = "nama_siswa")  val nama_siswa    : String,
     @ColumnInfo(name = "kelas_siswa") val kelas_siswa   : String,
     @ColumnInfo(name = "tanggal_siswa")  val tanggal_siswa    : Int,

@@ -21,6 +21,9 @@
             android:name=".Update"
             android:exported="false" />
         <activity
+            android:name=".Update"
+            android:exported="false" />
+        <activity
             android:name=".masuk_guru"
             android:exported="false" />
         <activity

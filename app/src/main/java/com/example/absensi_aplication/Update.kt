@@ -10,46 +10,45 @@ import com.example.absensi_aplication.room.DATABASE
 import com.example.absensi_aplication.room.Siswa
 
 class Update : AppCompatActivity() {
-    private lateinit var binding: ActivityUpdateBinding
-    private val db by lazy {DATABASE.getInstance(this)}
+
+    private lateinit var binding : ActivityUpdateBinding
+    private val db by lazy { DATABASE.getInstance(this) }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityUpdateBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        val KODE= intent.getStringExtra("nis_siswa").toString().toInt()
-        val data = db.daoSiswa().getKODE(KODE)
+        val id = intent.getStringExtra("nis_siswa").toString().toInt()
+        val data = db.daoSiswa().getSiswaById(id)[0]
 
-        binding.editnis.setText(data[0].Nis_siswa.toString().toInt())
-        binding.editnama.setText(data[0].nama_siswa)
-        binding.editkelas.setText(data[0].kelas_siswa)
-        binding.edittanggal.setText(data[0].tanggal_siswa.toString().toInt())
-        binding.editketerangan.setText(data[0].keterangan_siswa)
-        binding.editmasuk.setOnClickListener {
-            if (binding.editnis.text.isNotEmpty() &&
-                binding.editnama.text.isNotEmpty() &&
-                binding.editkelas.text.isNotEmpty() &&
-                binding.edittanggal.text.isNotEmpty() &&
-                binding.editketerangan.text.isNotEmpty()){
+        binding.updatenissiwa.setText(data.Nis_siswa.toString())
+        binding.updatenamasiswa.setText(data.nama_siswa)
+        binding.updatekelassiswa.setText(data.kelas_siswa)
+        binding.updatetanggalsiswa.setText(data.tanggal_siswa.toString())
+        binding.updateketerangansiswa.setText(data.kelas_siswa)
+        binding.updatemasuksiswa.setOnClickListener {
 
-                db.daoSiswa().updateSiswa(
-                    Siswa(
-                        KODE,
-                        binding.editnama.text.toString(),
-                        binding.editkelas.text.toString(),
-                        binding.edittanggal.text.toString().toInt(),
-                        binding.editketerangan.text.toString(),
-                        ))
-                Toast.makeText(applicationContext,"data berhasil diubah", Toast.LENGTH_SHORT).show()
-                startActivity(
-                    Intent(this,ActivityTampilsiswaBinding::class.java)
+            if( binding.updatenissiwa.text.isNotEmpty()&&
+                binding.updatenamasiswa.text.isNotEmpty()&&
+                binding.updatekelassiswa.text.isNotEmpty()&&
+                binding.updatetanggalsiswa.text.isNotEmpty()&&
+                binding.updateketerangansiswa.text.isNotEmpty()){
+
+                db.daoSiswa().updateSiswa(Siswa(
+                    id,
+                    binding.updatenamasiswa.text.toString(),
+                    binding.updatekelassiswa.text.toString(),
+                    binding.updatetanggalsiswa.text.toString().toInt(),
+                    binding.updateketerangansiswa.text.toString())
                 )
+                Toast.makeText(applicationContext,"Data Berhasil Diubah",
+                Toast.LENGTH_SHORT).show()
                 onBackPressed()
             }else{
-                Toast.makeText(applicationContext,"ubah data terlebih dahulu", Toast.LENGTH_SHORT).show()
-
+                Toast.makeText(applicationContext,"ubah data terleih dahulu",
+                Toast.LENGTH_SHORT).show()
             }
-        }
+    }
     }
 }
-

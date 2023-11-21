@@ -39,11 +39,11 @@ class Adapter_Siswa(val list: ArrayList<Siswa>, val listener: onAdapterListener)
         holder.keterangan.text = list[position].keterangan_siswa
         holder.delete.setOnClickListener {
             listener.hapus(list[position])
-            holder.edit.setOnClickListener {
-                listener.Update(list[position])
-            }
-        }
 
+        }
+        holder.edit.setOnClickListener {
+            listener.Update(list[position])
+        }
     }
     interface onAdapterListener{
         fun hapus(siswa: Siswa)

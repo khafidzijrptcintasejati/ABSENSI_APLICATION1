@@ -12,6 +12,9 @@ interface DaoSiswa{
     @Query("SELECT * FROM tb_siswa")
     fun getAllSiswa() : List<Siswa>
 
+    @Query("SELECT*FROM tb_siswa WHERE nis_siswa = :nis")
+    fun getSiswaById(nis : Int) : List<Siswa>
+
     @Insert
     fun insertSiswa( siswa: Siswa)
 

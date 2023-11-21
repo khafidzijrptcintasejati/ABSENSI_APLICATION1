@@ -57,7 +57,7 @@ class tampilguru : AppCompatActivity() {
     private fun DeleteGuru(guru: Guru) {
         val dialog = AlertDialog.Builder(this)
         dialog.apply {
-            setTitle("KOnfirmasi hapus siswa")
+            setTitle("Konfirmasi hapus guru")
             setMessage("Apakah anda yakin ingin menghapus data ini?")
             setNegativeButton("Batal") { dialogInterface: DialogInterface, i: Int ->
                 dialogInterface.dismiss()

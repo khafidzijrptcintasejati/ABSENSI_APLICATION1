@@ -12,6 +12,10 @@ interface DaoGuru {
     @Query("SELECT * FROM tb_Guru")
     fun getAllguru() : List<Guru>
 
+    @Query("SELECT*FROM tb_Guru WHERE nip_guru = :nip")
+    fun getSiswaById(nip : Int) : List<Guru>
+
+
     @Insert
     fun insertguru( guru: Guru)
 

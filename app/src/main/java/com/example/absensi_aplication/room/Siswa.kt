@@ -13,6 +13,4 @@ data class Siswa(
     @ColumnInfo(name = "kelas_siswa") val kelas_siswa   : String,
     @ColumnInfo(name = "tanggal_siswa")  val tanggal_siswa    : Int,
     @ColumnInfo(name = "keterangan_siswa")  val keterangan_siswa    : String
-
-
 )

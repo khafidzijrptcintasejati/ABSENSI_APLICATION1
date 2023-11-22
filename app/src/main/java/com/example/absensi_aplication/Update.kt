@@ -26,7 +26,7 @@ class Update : AppCompatActivity() {
         binding.updatenamasiswa.setText(data.nama_siswa)
         binding.updatekelassiswa.setText(data.kelas_siswa)
         binding.updatetanggalsiswa.setText(data.tanggal_siswa.toString())
-        binding.updateketerangansiswa.setText(data.kelas_siswa)
+        binding.updateketerangansiswa.setText(data.keterangan_siswa)
         binding.updatemasuksiswa.setOnClickListener {
 
             if( binding.updatenissiwa.text.isNotEmpty()&&

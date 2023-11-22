@@ -17,7 +17,7 @@ class masuk_guru : AppCompatActivity() {
         binding = ActivityMasukGuruBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        val nama = binding.namaguru
+         val nama = binding.namaguru
         val nip = binding.nipguru
 
 

@@ -24,10 +24,10 @@ class activity_loginguru : AppCompatActivity() {
 
                 db.daoGuru().insertguru(
                     Guru(
-                    binding.namaguru.text.toString(),
                     binding.nipguru.text.toString().toInt(),
-                    binding.tanggalguru.text.toString().toInt(),
-                    binding.keteranganguru.text.toString()
+                        binding.namaguru.text.toString(),
+                        binding.tanggalguru.text.toString().toInt(),
+                        binding.keteranganguru.text.toString()
                 )
                 )
 

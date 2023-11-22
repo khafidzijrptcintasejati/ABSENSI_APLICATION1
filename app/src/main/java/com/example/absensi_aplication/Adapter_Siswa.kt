@@ -1,5 +1,6 @@
 package com.example.absensi_aplication
 
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -17,6 +18,7 @@ class Adapter_Siswa(val list: ArrayList<Siswa>, val listener: onAdapterListener)
         val keterangan : TextView = itemView.findViewById(R.id.tampilketsswa)
         val delete : ImageView = itemView.findViewById(R.id.deletesiswa)
         val edit : ImageView = itemView.findViewById(R.id.mengeditsiswa)
+        val detail : TextView = itemView.findViewById(R.id.detailsiswa)
 
     }
 
@@ -37,6 +39,11 @@ class Adapter_Siswa(val list: ArrayList<Siswa>, val listener: onAdapterListener)
         holder.kelas.text = list[position].kelas_siswa
         holder.tanggal.text = list[position].tanggal_siswa.toString()
         holder.keterangan.text = list[position].keterangan_siswa
+        holder.detail.setOnClickListener{
+            val context= holder.itemView.context
+            val intent = Intent(context,DetailSiswa::class.java).putExtra("detailS", list[position].Nis_siswa.toString())
+            context.startActivity(intent)
+        }
         holder.delete.setOnClickListener {
             listener.hapus(list[position])
 

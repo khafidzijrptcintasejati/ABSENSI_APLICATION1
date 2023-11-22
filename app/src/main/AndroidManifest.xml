@@ -12,6 +12,9 @@
         android:theme="@style/Theme.ABSENSI_APLICATION"
         tools:targetApi="31">
         <activity
+            android:name=".DetailSiswa"
+            android:exported="false" />
+        <activity
             android:name=".UpdateGuru"
             android:exported="false" />
         <activity

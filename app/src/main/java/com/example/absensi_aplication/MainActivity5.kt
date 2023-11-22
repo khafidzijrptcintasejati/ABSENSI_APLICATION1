@@ -12,12 +12,18 @@ class MainActivity5 : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
 
+        val nama = intent.getStringExtra("nama").toString()
+        val nip = intent.getStringExtra("nip").toString()
+
         binding.btnguru2.setOnClickListener{
-            startActivity(Intent(this,tampilguru::class.java))
+            startActivity(Intent(this,tampilguru::class.java).putExtra("nama", nama.toString())
+                .putExtra("nip", nip.toString()))
         finish()}
         binding.btnmrd2.setOnClickListener{
             startActivity(Intent(this,tampilsiswa::class.java))
         finish()}
+
+
 
     }
 }

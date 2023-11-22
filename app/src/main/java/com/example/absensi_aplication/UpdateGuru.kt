@@ -21,10 +21,10 @@ class UpdateGuru : AppCompatActivity() {
         val data = db.daoGuru().getSiswaById(nip) [0]
 
 
-        binding.updatenamaguru.setText(data.nama_guru).toString()
-        binding.updatenipguru.setText(data.nip_guru).toString().toInt()
-        binding.updatetanggalguru.setText(data.tanggal_guru).toString().toInt()
-        binding.updateketeranganguru.setText(data.keterangan_guru).toString()
+        binding.updatenamaguru.setText(data.nama_guru)
+        binding.updatenipguru.setText(data.nip_guru.toString())
+        binding.updatetanggalguru.setText(data.tanggal_guru.toString())
+        binding.updateketeranganguru.setText(data.keterangan_guru)
         binding.updatemasukguru.setOnClickListener {
 
             if (binding.updatenamaguru.text.isNotEmpty() &&
@@ -33,8 +33,8 @@ class UpdateGuru : AppCompatActivity() {
                 binding.updateketeranganguru.text.isNotEmpty()) {
 
                 db.daoGuru().updateguru(Guru(
-                    binding.updatenamaguru.text.toString(),
                     nip,
+                    binding.updatenamaguru.text.toString(),
                     binding.updatetanggalguru.text.toString().toInt(),
                     binding.updateketeranganguru.text.toString())
                 )

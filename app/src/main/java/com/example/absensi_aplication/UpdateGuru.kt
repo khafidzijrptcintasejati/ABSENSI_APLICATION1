@@ -18,7 +18,7 @@ class UpdateGuru : AppCompatActivity() {
         setContentView(binding.root)
 
         val nip = intent.getStringExtra("nipGuru").toString().toInt()
-        val data = db.daoGuru().getSiswaById(nip) [0]
+        val data = db.daoGuru().getKODE(nip) [0]
 
 
         binding.updatenamaguru.setText(data.nama_guru).toString()

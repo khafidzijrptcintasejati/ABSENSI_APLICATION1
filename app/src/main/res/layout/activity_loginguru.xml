@@ -59,8 +59,8 @@
         app:srcCompat="@drawable/bgrnd" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="373dp"
-        android:layout_height="477dp"
+        android:layout_width="350dp"
+        android:layout_height="466dp"
         android:layout_marginBottom="68dp"
         android:background="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
